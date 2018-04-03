@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c11ffe1808b44c48acbd600a1ae79408e6012812974adb1420c1d06bade9d787
-size 448
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ScoreBoard : MonoBehaviour {
+
+    Text scoreString;
+    int score;
+
+	// Use this for initialization
+	void Start () {
+        scoreString = GetComponent<Text>();
+        scoreString.text = score.ToString();
+	}
+	
+    public void AddPoints (int points) {
+        score += points;
+        scoreString.text = score.ToString();
+    }
+}

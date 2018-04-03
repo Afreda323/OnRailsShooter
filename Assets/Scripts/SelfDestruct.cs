@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bbc54e3951d5d7ac81ff9cc90ab87179c83a47361ee11786a4a236a99c383cb0
-size 293
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SelfDestruct : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+        Invoke("destroySelf", 3f);
+	}
+	
+    private void destroySelf () 
+    {
+        Destroy(gameObject);
+    }
+}

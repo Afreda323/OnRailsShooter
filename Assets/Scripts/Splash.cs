@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22f32194b823af665ec80e75dc3b2e791b1c6abbb217315d5f6fcb800d79e48d
-size 387
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Splash : MonoBehaviour
+{
+    [SerializeField] float splashTime = 2f;
+
+
+    // Use this for initialization
+    void Start()
+    {
+        Invoke("GoToGame", splashTime);
+    }
+
+    void GoToGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}
